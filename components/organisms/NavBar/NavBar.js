@@ -1,11 +1,10 @@
 import { useState } from "react"
 import navStyles from "./Nav.module.scss"
-
 import Logo from "../../atoms/Logo"
-
 import Image from "next/image"
 import Link from "next/link"
-import HamburgerMenu from "../../molecules/hamburger"
+import HamburgerMenu from "../../molecules/Hamburger"
+
 const navItems = [
 	{
 	  navHeadLine: 'সর্বশেষ',

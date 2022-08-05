@@ -1,0 +1,21 @@
+@import "../../../../styles/settings/_settings";
+
+.midiumStoryCard{
+    &:hover{
+        span{
+            color: color(lochmara-blue)
+        }
+    }
+
+    @media (min-width: breakpoint(tablet)) {
+        // max-width: 240px;
+        //   img{
+        //       max-width: 278px;
+        //       max-height: 187px;
+        //   }
+      }
+
+      @media (min-width: breakpoint(desktop)) {
+      }
+
+}

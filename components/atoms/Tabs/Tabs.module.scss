@@ -1,0 +1,50 @@
+@import "../../../styles/settings/_settings";
+
+
+.tab {
+  width: 100%;
+  ul.inline {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+  }
+  
+  ul.inline,
+  li {
+    display: inline-block;
+    margin-left: 0;
+    padding: 10px;
+    border-bottom: 2px solid #eee;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+
+  .tabName{
+    color: color(black);
+    line-height: 1.33;
+    padding: 0 spacing(space0_4) spacing(space0_8) 0;
+    margin-right: spacing(space1_6);
+    font-weight: font-weight(bold);
+    font-size: font-size(fs-18);
+  }
+  .selected{
+    border-color: color(guardsman-red);
+    border-bottom: 3px solid color(guardsman-red);
+    margin-bottom: -2px;
+  }
+
+  li{
+    &:hover{
+      border-color: color(guardsman-red);
+      border-bottom: 3px solid color(guardsman-red);
+      margin-bottom: -2px;
+    }
+  }
+  
+}
+

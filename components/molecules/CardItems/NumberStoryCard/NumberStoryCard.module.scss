@@ -1,0 +1,26 @@
+@import "../../../../styles/settings/_settings";
+
+.numberStoryCard{
+    max-width: 240px;
+    &:hover{
+        span{
+            color: color(lochmara-blue)
+        }
+    }
+    &:not(:last-child):after {
+        content: "";
+        display: block;
+        border-bottom: 1px solid color(very-light-pink);
+    }
+}
+
+.title{
+    margin: 0px;
+    margin-bottom: 1.5rem;
+    color: color(meta-color);
+}
+.subTitle{
+    margin: 0;
+    margin-bottom: 1.5rem;
+    font-size: font-size(fs-18);
+}

@@ -1,0 +1,81 @@
+@import "../../../styles/settings/_settings";
+
+.nav {
+  margin-bottom: 43px;
+  align-items: center;
+  flex-wrap: wrap;
+  // flex-direction: column;
+  @include responsive-padding;
+  @media (min-width: breakpoint(mobile)) {
+    @include flex(column) {
+      justify-content: left;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    border-top: 1px solid #e2e2e2;
+    border-bottom: 1px solid #e2e2e2;
+  }
+  display: none;
+  
+ 
+  
+}
+
+.logoHam {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 43px;
+  align-items: center;
+  align-content: center;
+  @include responsive-padding;
+  .hamburgerIcon {
+    cursor: pointer;
+    @media (min-width: breakpoint(mobile)) {
+      display: none;
+    }
+  }
+
+  .logo {
+    width: 236px;
+    height: 26px;
+    display: flex;
+    align-content: center;
+
+  }
+
+   @media (min-width: breakpoint(mobile)) {
+    justify-content: center;
+  }
+}
+
+
+.links {
+  width: 283px;
+
+  // Check the Links component inside of Nav.tsx. It contains a media query that makes it hidden
+  // if the user passes "true" to the "hideAtMobile" prop.
+
+  @include grid(24px) {
+    @media (min-width: breakpoint(tablet)) {
+      grid-auto-flow: column;
+    }
+
+    @media (min-width: breakpoint(laptop)) {
+      gap: 0;
+    }
+  }
+
+  a {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: font-weight(bold);
+    color: color(grey);
+    letter-spacing: 0.8px;
+    &:hover {
+      color: color(dark-grey-blue);
+    }
+    
+  }
+ 
+
+}

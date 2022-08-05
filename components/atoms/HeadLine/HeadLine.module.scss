@@ -1,0 +1,13 @@
+@import "../../../styles/settings/_settings";
+
+.headlineTitle {
+    // color: color(black);
+    font-size: font-size(fs-20);
+    padding-bottom: spacing(space0_8);
+    font-weight: font-weight(bold);
+    display: block;
+}
+
+.subTitle{
+    color: color(guardsman-red);
+}

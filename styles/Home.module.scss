@@ -1,0 +1,102 @@
+@import "./settings/__settings";
+
+#home {
+
+    @include flex(column) {
+      align-items: center;
+    }
+  
+    section.fourCollection12Stories {
+      border-bottom: 1px solid color(very-light-pink);
+      border-radius: 0;
+      color: color(dark-grey-blue);
+  
+      @include flex($direction: row) {
+        align-items: center;
+      }
+  
+      .container {
+        grid-template-columns: 12fr;
+  
+        @include grid(48px) {
+          @media (min-width: breakpoint(tablet)) {
+            gap: 32px;
+            max-width: 1080px;
+            // grid-template-columns: 5fr 7fr;
+            grid-template-columns: 3fr 9fr;
+  
+          }
+  
+          @media (min-width: breakpoint(desktop)) {
+            gap: 30px;
+            grid-auto-flow: column;
+            // grid-template-columns: 3fr 9fr;
+            max-width: 1280px;
+          }
+        }
+  
+        z-index: 1;
+        width: 100%;
+  
+        @include between-breakpoints(breakpoint(tablet), breakpoint(laptop)) {
+          margin-top: 0px;
+        }
+  
+        @media (min-width: breakpoint(desktop)) {
+          // flex-direction: row;
+          margin-top: 0px;
+        }
+      }
+  
+      .middle {
+        @include grid(48px) {
+          grid-template-columns: 12fr;
+  
+          @media (min-width: breakpoint(tablet)) {
+            gap: 32px;
+            grid-template-columns: 8fr 4fr;
+          }
+  
+          @media (min-width: breakpoint(desktop)) {
+            gap: 30px;
+            grid-auto-flow: column;
+          }
+        }
+      }
+  
+      .newsName {
+        margin: 0;
+        padding-bottom: spacing(space0_8);
+        // font-size: var(--fs-20);
+      }
+  
+      .newsName::before {
+        content: "";
+        width: 20px;
+        height: 20px;
+        background: color(lochmara-blue);
+        display: inline-block;
+        border-radius: 50%;
+        position: relative;
+        top: spacing(space1_0);
+        margin-right: spacing(space1_0);
+        position: relative;
+        top: unset;
+      }
+  
+      .adSlot300x250 {
+        width: 300px;
+        height: 250px;
+        margin-bottom: 1rem;
+        border: 1px solid color(very-light-pink);
+        border-radius: 0;
+  
+        @include flex(column) {
+          align-items: center;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+  
+    }
+}  

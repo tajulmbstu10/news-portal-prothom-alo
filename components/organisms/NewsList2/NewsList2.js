@@ -1,6 +1,7 @@
 import newsListStyles2 from "./NewsList2.module.scss"
 import HeadLine from '../../atoms/HeadLine'
 import data from '../../../database/data.json'
+import Image from 'next/image'
 
 const items = data
 
@@ -9,8 +10,16 @@ const NewsList2 = () => {
     <>
       {items.selected.items.sort((a, b) => parseFloat(a.sort) - parseFloat(b.sort)).slice(1,2).map((newsItem, index) => (
         <div className={newsListStyles2.bigStoryCards} key={index+1}>
-          <a href={'/newsdetails/selected/'+ newsItem.id}>
-            <img src={newsItem.thumb} type="image/webp" max-width="580px" max-height="240px" width="100%" height="100%" className="qt-image image gm-added gm-loaded gm-observing gm-observing-cb" alt="আকাশের তারা সাধারণ ক্যামেরায় তোলা ছবিতে দেখা যায় না কেন?" loading="lazy" />
+          <a href={'/newsdetails/selected/'+ newsItem.id} className={newsListStyles2.bigStoryCard}>
+            <div className={newsListStyles2.coverPhoto}>
+              <Image
+                layout='responsive'
+                src={newsItem.thumb}
+                alt="Cover picture of story"
+                width="100%"
+                height="58%"
+              />
+            </div>
             <div className={newsListStyles2.storyData}>
               <div className={newsListStyles2.headlineTitle}>
                 <HeadLine newsTitle={newsItem.headline} countNumber={index+1}/>

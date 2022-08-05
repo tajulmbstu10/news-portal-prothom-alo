@@ -13,7 +13,7 @@ export default function Home() {
     <div id={indexStyles.home}>
       <Head>
         <title>প্রথম আলো | বাংলা নিউজ পেপার</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
         <meta name="author" content="Vinci Taylaran" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
@@ -28,7 +28,7 @@ export default function Home() {
             <div>
               <h4 className={indexStyles.newsName}>{items.selected.name}</h4>
               <div className={indexStyles.middle}>
-                <div>
+                <div className={indexStyles.bigStoryColumn}>
                   <NewsList2 />
                   <NewsList3 />
                 </div>
@@ -42,7 +42,6 @@ export default function Home() {
         </section>
         <section className={indexStyles.adSlotFullWidthx300}>AD-100%x250</section>
       </main>
-
     </div>
   )
 }

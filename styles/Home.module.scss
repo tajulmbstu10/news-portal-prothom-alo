@@ -106,11 +106,15 @@
     margin-bottom: 1rem;
     border: 1px solid color(very-light-pink);
     border-radius: 0;
-
+    padding: spacing(space0_8);
     @include flex(column) {
       align-items: center;
       justify-content: center;
       align-items: center;
+    }
+
+    @media (min-width: breakpoint(tablet)) {
+      
     }
 
   }

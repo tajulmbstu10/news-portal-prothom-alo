@@ -33,7 +33,7 @@ export default function Home() {
                   <NewsList3 />
                 </div>
                 <div className={indexStyles.shortStoryColWrapper}>
-                <div class={indexStyles.adSlot300x250}>AD-300x250</div>
+                <div className={indexStyles.adSlot300x250}>AD-300x250</div>
                 <SmallStoryList />
                 </div>
               </div>

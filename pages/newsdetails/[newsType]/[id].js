@@ -25,15 +25,15 @@ const NewsDetails = ({ filterData }) => {
             <div>
               <h1 className={newsDetailsStyles.headLine}>{filterData?.headline ? filterData?.headline : ''}</h1>
             </div>
-            <div>
+            <div className={newsDetailsStyles.coverPhoto}>
               {
-                filterData.hasOwnProperty('cover-photo') ?
+                filterData['cover-photo'] ?
                   <Image
                     layout='responsive'
                     src={filterData['cover-photo']}
                     alt="Picture of the author"
                     width={100}
-                    height={100}
+                    height={55}
                   />
                   : (filterData.hasOwnProperty('cover-photo') &&
                     <Image
@@ -41,9 +41,7 @@ const NewsDetails = ({ filterData }) => {
                       src={filterData['thumb']}
                       alt="Picture of the author"
                       width={100}
-                      height={100}
-                      className={newsDetailsStyles.coverPhoto}
-
+                      height={55}
                     />
                   )
               }

@@ -1,0 +1,39 @@
+@import "./settings/__settings";
+
+.newsDetailsContentWrapper{
+    width: 100%;
+    margin: auto;
+    padding: spacing(space1_6);
+    .subHeadLine {
+        font-size: font-sizes(fs-20);
+        color: color(light-grey);
+        line-height: 1.36;
+        font-weight: font-weight(bold);
+        letter-spacing: spacing(regular);
+        padding-bottom: spacing(space0_8);
+        margin: 0;
+    }
+    
+    .headLine {
+        font-size: font-sizes(fs-22);
+        color: color(black);
+        line-height: 1.4;
+        font-weight: font-weight(bold);
+        padding-bottom: spacing(space1_6);
+        margin: 0;
+        border-bottom: 1px solid color( very-light-pink);
+    }
+    
+    .descriptions{
+        font-size: font-sizes(fs-18);
+        line-height:1.7;
+        white-space:break-spaces;
+        width: 90%;
+        margin: auto;
+        margin-bottom: spacing(space1_6);
+    }
+    
+    .coverPhoto{
+        margin-bottom: 1.5rem;
+    }
+}

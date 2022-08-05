@@ -1,0 +1,35 @@
+
+@import "../../../styles/settings/_settings";
+
+
+.bigStoryCards{
+    margin-bottom: 1.33rem;
+    position: relative;
+    color:color(white);
+    &:hover{
+        .headlineTitle{
+            color: color(orange)
+        }
+    }
+    @include grid(48px) {
+        @media (min-width: breakpoint(tablet)) {
+            // max-width: 580px;
+            // max-height: 340px;
+        }
+    
+        @media (min-width: breakpoint(desktop)) {
+        }
+      }
+}
+
+.headlineTitle{
+    padding: spacing(space0_8);
+    font-weight: font-weight(bold);
+    display: block;
+    position: absolute;
+    bottom: 1rem;
+    margin: 0;
+    margin-left: spacing(space2_0);
+    font-size: font-size(fs-22);
+}
+

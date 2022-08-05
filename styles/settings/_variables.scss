@@ -1,0 +1,94 @@
+$ratio : 1.112;
+$colors: (
+  light-cream: #fefcf7,
+  dark-cyan: #0e8784,
+  dark-grey-blue: #333d4b,
+  pale-orange: #fdd6ba,
+  grey: #83888f,
+  outer-space: #2c343e,
+  spring-wood: #f4f1eb,
+  lochmara-blue: #0573e6,
+  black: #121212,
+  guardsman-red: #d60000,
+  orange:#ffb300,
+  white: #fff,
+  meta-color:#949494,
+  very-light-pink:#e2e2e2,
+  light-grey:#595959,
+);
+
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  bold: 700,
+  extra-bold: 900,
+);
+
+$breakpoints: (
+  mobile-s: 320px,
+  mobile: 480px,
+  tablet: 768px,
+  laptop: 1024px,
+  desktop: 1400px,
+);
+
+$heading-sizes: (
+  // if browser font size is 16 px, then 4.5 rem = 72px
+  h1: 4.5rem,
+  // 40px
+  h2: 2.5rem,
+  // 32px
+  h3: 2rem,
+  // 24px
+  h4: 1.5rem
+);
+
+$spacing:(
+  regular:400,
+  space0_2: 0.1111rem,
+  space0_4: 0.222rem,
+  space0_5: 0.2777rem,
+  space0_6: 0.333rem,
+  space0_8: 0.4444rem,
+  space1_0: 0.55556rem,
+  space1_2: 0.667rem,
+  space1_4: 0.7778rem,
+  space1_6: 0.8889rem,
+  space2_0: 1.11rem,
+  space2_2: 1.222rem,
+  space2_4: 1.333rem,
+  space3_0: 1.667rem,
+  space3_2: 1.777rem,
+  space3_4: 1.889rem,
+  space3_6: 2rem,
+  space3_8: 2.111rem,
+  space4_0: 2.222rem,
+  space4_8: 2.6667rem,
+  space5_6: 3.1111rem,
+  space6_4: 3.556rem,
+  space7_2: 4rem,
+  space8_0: 4.444rem,
+  space8_8: 4.889rem,
+  space9_4: 5.22rem,
+);
+
+$font-sizes : (
+  fs-12: calc(1rem/$ratio/$ratio/$ratio/$ratio),
+  fs-13: calc(1rem/$ratio/$ratio/$ratio),
+  fs-14_5: calc(1rem/$ratio/$ratio),
+  fs-16: calc(1rem/$ratio),
+  fs-18: 1rem,
+  fs-20: calc(1rem*$ratio),
+  fs-22: calc(1rem*$ratio*$ratio),
+  fs-25: calc(1rem*$ratio*$ratio*$ratio),
+  fs-27_5: calc(1rem*$ratio*$ratio*$ratio*$ratio),
+  fs-30_5: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio),
+  fs-34: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio),
+  fs-38: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio),
+  fs-42: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio),
+  fs-47: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio),
+  fs-52: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio),
+  fs-58: calc(1rem*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio*$ratio),
+);
+

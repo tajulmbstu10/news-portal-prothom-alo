@@ -1,0 +1,26 @@
+@import "variables";
+
+@function color($name) {
+  @return map-get($colors, $name);
+}
+
+@function font-weight($weight) {
+  @return map-get($font-weights, $weight);
+}
+
+@function breakpoint($device) {
+  @return map-get($breakpoints, $device);
+}
+
+@function heading($headingType) {
+  @return map-get($heading-sizes, $headingType);
+}
+
+
+@function spacing($space) {
+  @return map-get($spacing, $space);
+}
+
+@function font-size($size) {
+  @return map-get($font-sizes, $size);
+}

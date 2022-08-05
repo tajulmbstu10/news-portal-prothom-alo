@@ -1,0 +1,100 @@
+@import "functions";
+
+// Include this mixin for each section in your homepage.
+@mixin responsive-padding {
+  // padding: 0.5rem 1.5rem 0;
+  padding: 0.5rem 1.5rem 0.5rem;
+
+  @media (min-width: breakpoint(tablet)) {
+    // padding: 0 2.5rem 0;
+    padding: 0.5rem 2.5rem 0.5rem;
+  }
+
+  @media (min-width: breakpoint(laptop)) {
+    // padding: 0 3.5rem 0;
+    padding: 0 3.5rem 0;
+    padding: 0.5rem 3.5rem 0.5rem;
+  }
+
+  @media (min-width: breakpoint(desktop)) {
+    // padding: 0 5rem 0;
+    padding: 0.5rem 5rem 0.5rem;
+  }
+}
+
+// TODO: Change background-size to contain. For "contain" to display the'
+// image properly, must be nested within a container with the appropriate width
+// and height.
+@mixin background($path) {
+  background: url($path);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@mixin flex($direction: row) {
+  display: flex;
+  flex-wrap: wrap;
+  @if $direction {
+    flex-direction: $direction;
+  }
+
+  @content;
+}
+
+@mixin between-breakpoints($min, $max) {
+  /**
+   // This example shows how to create a breakpoint between tablet width and laptop.
+    @import "functions";
+
+   @include between-breakpoints(breakpoint(tablet), breakpoint(laptop)) {
+     // your styles...
+   }  
+  */
+
+  @media (min-width: $min) and (max-width: $max) {
+    @content;
+  }
+}
+
+@mixin section-margin-bottom {
+  margin-bottom: 120px;
+  @media (min-width: breakpoint(tablet)) {
+    margin-bottom: 144px;
+  }
+  // @media (min-width: breakpoint(desktop)) {
+  //   margin-bottom: 1.45px;
+  // }
+}
+
+@mixin grid($gap: 10px) {
+  display: grid;
+  // grid-template-columns: minmax(0, 1fr);
+  // /*using 'px' instead of 'fr' works */
+  // grid-template-areas: "item1";
+  @if $gap {
+    gap: $gap;
+  }
+
+  @content;
+}
+
+@mixin section-left-right-padding($breakpoint) {
+  @if $breakpoint <= breakpoint(tablet) {
+    padding-left: 24px;
+    padding-right: 24px;
+  } @else {
+    padding-left: 84px;
+    padding-right: 84px;
+  }
+}
+
+// Ignores the left and right padding of the body element in globals.scss.
+// Components such as <HowItWorks /> in the plan page ignore the left and right padding of the body.
+@mixin ignore-body-padding {
+  @media (max-width: breakpoint(tablet) - 1) {
+    margin: 0 -30px 0 -25px;
+  }
+  @media (min-width: breakpoint(tablet)) and (max-width: breakpoint(laptop) - 1) {
+    margin: 0 -40px;
+  }
+}

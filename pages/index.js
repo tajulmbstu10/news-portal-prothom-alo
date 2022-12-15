@@ -1,14 +1,19 @@
-import Head from "next/head"
-import indexStyles from "../styles/Home.module.scss"
-import NewsList from "../components/organisms/NewsList"
-import NewsList2 from "../components/organisms/NewsList2"
-import NewsList3 from "../components/organisms/NewsList3"
-import SmallStoryList from "../components/organisms/SmallStoryList"
-import data from '../database/data.json'
+import Head from "next/head";
+import indexStyles from "../styles/Home.module.scss";
+import NewsList from "../components/organisms/NewsList";
+import NewsList2 from "../components/organisms/NewsList2";
+import NewsList3 from "../components/organisms/NewsList3";
+import SmallStoryList from "../components/organisms/SmallStoryList";
+import data from "../database/data.json";
+import { useState } from "react";
 
-const items = data
+const items = data;
 
 export default function Home() {
+  const [num, setNum] = useState(10);
+  // setNum(20);
+  console.log(num);
+
   return (
     <div id={indexStyles.home}>
       <Head>
@@ -24,7 +29,9 @@ export default function Home() {
       <main>
         <section className={indexStyles.fourCollection12Stories}>
           <div className={indexStyles.container}>
-            <div><NewsList /></div>
+            <div>
+              <NewsList />
+            </div>
             <div>
               <h4 className={indexStyles.newsName}>{items.selected.name}</h4>
               <div className={indexStyles.middle}>
@@ -33,15 +40,17 @@ export default function Home() {
                   <NewsList3 />
                 </div>
                 <div className={indexStyles.shortStoryColWrapper}>
-                <div className={indexStyles.adSlot300x250}>AD-300x250</div>
-                <SmallStoryList />
+                  <div className={indexStyles.adSlot300x250}>AD-300x250</div>
+                  <SmallStoryList />
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <section className={indexStyles.adSlotFullWidthx300}>AD-100%x250</section>
+        <section className={indexStyles.adSlotFullWidthx300}>
+          AD-100%x250
+        </section>
       </main>
     </div>
-  )
+  );
 }
